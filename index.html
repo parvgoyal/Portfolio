@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parv's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="background-container">
+        <div class="space-background">
+            <div class="nebula"></div>
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="https://via.placeholder.com/300" alt="Parv's Profile Photo">
+                </div>
+                <div class="profile-text">
+                    <h1>Hi, I'm Parv</h1>
+                    <p class="subtitle">Web Developer & Designer</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer with a keen interest in creating beautiful and functional websites. I love turning complex problems into simple, beautiful, and intuitive solutions.</p>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Weather App</h3>
+                    <p>A responsive weather application that provides real-time weather information based on user location or search. Features include current conditions, forecasts, and interactive maps.</p>
+                    <div class="project-tags">
+                        <span class="tag">Web App</span>
+                        <span class="tag">API Integration</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                    <div class="project-button-container">
+                        <a href="#" class="project-button">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Todo List</h3>
+                    <p>A task management application that allows users to create, organize, and track their daily tasks. Features include task categories, due dates, and progress tracking.</p>
+                    <div class="project-tags">
+                        <span class="tag">Task Management</span>
+                        <span class="tag">Local Storage</span>
+                        <span class="tag">Interactive UI</span>
+                    </div>
+                    <div class="project-button-container">
+                        <a href="#" class="project-button">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social">
+            <h2>Connect With Me</h2>
+            <div class="social-container">
+                <a href="https://github.com/parvpatel2004" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/parv-patel-4b8b2b2b2/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://twitter.com/parvpatel2004" class="social-link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me!</p>
+            <div class="contact-info">
+                <p>Email: parvgoyal234@gmail.com</p>
+                <p>Phone: 9306444905</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Parv's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create stars
+            const starsContainer = document.getElementById('stars');
+            const stars2Container = document.getElementById('stars2');
+            const stars3Container = document.getElementById('stars3');
+            
+            // Create small stars
+            for (let i = 0; i < 500; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 50}s`;
+                star.style.animationDuration = `${120 + Math.random() * 60}s`;
+                starsContainer.appendChild(star);
+            }
+            
+            // Create medium stars
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.className = 'star star2';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 50}s`;
+                star.style.animationDuration = `${150 + Math.random() * 60}s`;
+                stars2Container.appendChild(star);
+            }
+            
+            // Create large stars
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star star3';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 50}s`;
+                star.style.animationDuration = `${180 + Math.random() * 60}s`;
+                stars3Container.appendChild(star);
+            }
+            
+            // Background gradient animation
+            const gradients = [
+                { start: '#0a001a', middle: '#1a0033', end: '#2d004d' },
+                { start: '#070014', middle: '#15002b', end: '#250042' },
+                { start: '#050010', middle: '#100024', end: '#1d0038' },
+                { start: '#030008', middle: '#0b001c', end: '#15002e' }
+            ];
+            
+            let currentGradientIndex = 0;
+            
+            function updateGradient() {
+                const gradient = gradients[currentGradientIndex];
+                document.querySelector('.space-background').style.background = 
+                    `linear-gradient(180deg, 
+                        ${gradient.start} 0%,
+                        ${gradient.middle} 40%,
+                        ${gradient.end} 100%)`;
+                
+                currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
+            }
+            
+            // Initial gradient
+            updateGradient();
+            
+            // Change gradient every 30 seconds
+            setInterval(updateGradient, 30000);
+        });
+    </script>
+</body>
+</html> 
